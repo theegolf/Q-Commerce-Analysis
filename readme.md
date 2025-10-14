@@ -1,9 +1,9 @@
 # **Blinkit: A Q-Commerce Case Study**
-
+***Theerathorn Tapanakulsak***
   <table style="width: 95%; margin-left: auto; margin-right: auto; border: 1px solid; padding: 20px;">
     <tr>
-      <td style="border: none;">
-        <p style="font-size: 1.75em; font-weight: bold; color: white">Abstract
+      <td style="border: none;" colspan=2>
+        <p style="font-size: 1.75em; color: white"><b>Abstract</b>
       </td>
     </tr>
     <tr>
@@ -36,7 +36,7 @@ By analyzing authentic business data from Blinkit, this research advances both a
 
 The analysis utilizes a comprehensive dataset published on [Kaggle](https://www.kaggle.com/datasets/yashmotiani/blinkit-marketing-and-customer-powerbi-dashbord), by user YASH MOTIANI, originally designed for machine learning applications in demand prediction, price optimization, and business intelligence insights.
 
-The dataset contains 5,400 campaign records spanning March 2023 to November 2024, providing nearly two years of marketing performance data. Each record captures essential campaign metrics including campaign name, target audience segmentation, marketing channel, impressions, click-through rates, conversion rates, campaign costs, revenue generated, and return on advertising spend (ROAS).
+The dataset contains 5,400 campaign records spanning March 2023 to November 2024, providing nearly two years of marketing performance data. Each record captures essential campaign metrics, including campaign name, target audience segmentation, marketing channel, impressions, click-through rates, conversion rates, campaign costs, revenue generated, and return on advertising spend (ROAS).
 
 ## Metrics and Analysis
 
@@ -84,7 +84,10 @@ The dataset contains 5,400 campaign records spanning March 2023 to November 2024
     1.  **Click-Through Rate (CTR)**
 
         -   CTR is the percentage of people who click on a particular link or advertisement appearing on the screen. It measures how well an advertisement captures viewers' attention. Nowadays, however, this metric has gradually depreciated in importance due to users' desensitization to advertisements that are displayed ubiquitously on the Internet. The audience's disinterest lowers the clicking chance of the advertisement, reducing the metric's precision and validity. To calculate CTR, the formula is
-            $$\boxed{\text{CTR} = \frac{\text{Total Measured Clicks}}{\text{Total Measured Ad Impressions}} \times 100}$$
+
+
+        $$\boxed{\text{CTR} = \frac{\text{Total Measured Clicks}}{\text{Total Measured Ad Impressions}} \times 100}$$
+
 
         <table style="margin-left: auto; margin-right: auto;">
           <tr>
@@ -98,10 +101,11 @@ The dataset contains 5,400 campaign records spanning March 2023 to November 2024
         </table>
 
         -   The box plot for CTR by target group and channel demonstrates similar performance of all channels across all audience segments, with median CTR between 9 and 11%. It suggests the comparable effectiveness of these channels regardless of targeted users. However, each channel has significant variability, as shown by the long whisker extensions and numerous outliers. Some campaigns achieve a CTR of over 95%, while others fall below 5%. The outliers indicate that when conditions are right, any channel with any audience can perform exceptionally well. Therefore, the organization should focus on the execution quality rather than channel choice to achieve successful campaigns.
-    <br>
-    2.  **Conversion Rate (CVR)**
+
+    3.  **Conversion Rate (CVR)**
 
         -   CVR is the percentage of people who completed a desired action. It measures the success of an advertisement or campaign. To calculate CVR, the formula is
+
             $$\boxed{\text{CVR} = \frac{\text{Total Measured Conversions}}{\text{Total Measured Clicks}} \times 100}$$
 
          <table style="margin-left: auto; margin-right: auto;">
@@ -116,10 +120,11 @@ The dataset contains 5,400 campaign records spanning March 2023 to November 2024
          </table>
 
         -   The box plot for CVR by target group and channel demonstrates the consistent cross-channel performance with a median around 8-11% despite subtle differences between channels in the same targeted users. It suggests the similarity between groups and the minimal impact of channel choice on conversion performance. Similar to the CTR data, many high-variability data points and numerous outliers in every channel signal the importance of campaign-specific factors over channel choice or audience type.
-    <br>
-    3.  **Cost-Per-Click (CPC)**
 
-        -   CPC is the average financial cost of each click for a certain advertisement. It is usually monitored when placing an advertisement on a website or advertising platform. However, in this case, it serves as a metric for measuring the financial effectiveness of an advertisement or campaign to engage users. The lower the value, the more effective the campaign. To calculate CPC, the formula isula is
+    4.  **Cost-Per-Click (CPC)**
+
+        -   CPC is the average financial cost of each click for a certain advertisement. It is usually monitored when placing an advertisement on a website or advertising platform. However, in this case, it serves as a metric for measuring the financial effectiveness of an advertisement or campaign to engage users. The lower the value, the more effective the campaign. To calculate CPC, the formula is
+
             $$\boxed{\text{CPC} = \frac{\text{Total Spending}}{\text{Total Measured Clicks}}}$$
 
          <table style="margin-left: auto; margin-right: auto;">
@@ -133,12 +138,13 @@ The dataset contains 5,400 campaign records spanning March 2023 to November 2024
            </tr>
          </table>
 
-        -   The box plot for CPC by target group and channel illustrates the cost consistency of campaigns across channels and target groups, with the median between \$5.1-6.3 per click. There are high variability patterns and many outliers in all plots.
+        -   The box plot for CPC by target group and channel illustrates the cost consistency of campaigns across channels and target groups, with the median between $5.1-6.3 per click. There are high variability patterns and many outliers in all plots.
         -   These data suggest that the campaigns should focus more on campaign characteristics and audience-specific factors, regardless of channel choices, to achieve the lowest CPC (high clicks) as much as possible. Moreover, campaigns targeting premium users have the lowest CPC, showing the advantage of targeting this group as they offer both lower acquisition costs and potentially generate higher revenue.
-    <br>
-    4.  **Cost-Per-Acquisition (CPA)**
+
+    5.  **Cost-Per-Acquisition (CPA)**
 
         -   CPA is the average financial cost of each conversion for a certain advertisement. It measures the financial effectiveness of an advertisement to encourage customer conversions. To calculate CPA, the formula is
+
             $$\boxed{\text{CPA} = \frac{\text{Total Spending}}{\text{Total Measured Conversions}}}$$
 
          <table style="margin-left: auto; margin-right: auto;">
@@ -152,12 +158,13 @@ The dataset contains 5,400 campaign records spanning March 2023 to November 2024
            </tr>
          </table>
 
-        -   The CPA box plot reveals consistent performance patterns across both channels and target audiences, with median acquisition costs ranging from \$50-60. This consistency indicates that neither channel selection nor audience targeting provides a significant cost advantage in the customer acquisition process. However, the data shows high variability with numerous expensive outliers reaching over $400. These costly acquisitions likely result from campaigns with low conversion rates, poor optimization, or execution during highly competitive periods.
-        -   The data requires investigation for the causes of high-cost outliers for further improvement and optimization. The budget for each acquisition across all channels and audience combinations should be \$50-60.
-    <br>
-    5.  **Revenue-Per-Conversion (RPC)**
+        -   The CPA box plot reveals consistent performance patterns across both channels and target audiences, with median acquisition costs ranging from $50-60. This consistency indicates that neither channel selection nor audience targeting provides a significant cost advantage in the customer acquisition process. However, the data shows high variability with numerous expensive outliers reaching over $400. These costly acquisitions likely result from campaigns with low conversion rates, poor optimization, or execution during highly competitive periods.
+        -   The data requires investigation for the causes of high-cost outliers for further improvement and optimization. The budget for each acquisition across all channels and audience combinations should be $50-60.
+
+    6.  **Revenue-Per-Conversion (RPC)**
 
         -   It is the average revenue generated for each successful conversion and evaluates the profitability of marketing efforts and the revenue each customer generates. To calculate RPC, the formula is
+
             $$\boxed{\text{RPC} = \frac{\text{Total Revenue Generated}}{\text{Total Measured Conversions}}}$$
 
          <table style="margin-left: auto; margin-right: auto;">
@@ -171,10 +178,10 @@ The dataset contains 5,400 campaign records spanning March 2023 to November 2024
            </tr>
          </table>
 
-        -   The RPC box plot by target groups and channels demonstrates the consistent revenue generation from all channels and users with a median RPC around \$99-120. It indicates that all segments generated a similar amount of revenue, a surprising result as premium customer acquisition usually yields the highest amount per conversion. There are also high-value outliers reaching \$800-1,000, indicating the existence of high-value customers from large purchases in each group and channel combination.
+        -   The RPC box plot by target groups and channels demonstrates the consistent revenue generation from all channels and users with a median RPC of around $99-120. It indicates that all segments generated a similar amount of revenue, a surprising result as premium customer acquisition usually yields the highest amount per conversion. There are also high-value outliers reaching $800-1,000, indicating the existence of high-value customers from large purchases in each group and channel combination.
         -   From the data, the condition driving larger purchases should be identified and optimized for campaigns targeting each group accordingly, and the budget allocation should focus on conversion volume rather than expected revenues since the RPC is consistent across all segments and channels.
-    <br>
-    6.  **Return on Ad Spend (ROAS)**
+
+    7.  **Return on Ad Spend (ROAS)**
 
         -   ROAS is the profitability metric for measuring the direct revenue generated from an advertisement <u>without</u> considering other expenses. It indicates the capability of an advertisement to produce revenue. To calculate ROAS, the formula is
 
@@ -193,8 +200,8 @@ The dataset contains 5,400 campaign records spanning March 2023 to November 2024
 
         -   The ROAS box plot by target users and channels demonstrates consistently positive performance across all combinations, with median ROAS values ranging between 2.5-2.9x, confirming that most campaigns generate substantial returns by nearly tripling the advertising investment.
         -   Two distinct patterns of audience performance emerge from the data: consistent audience performance and differentiated audience performance. App, Email, and Social Media exhibit consistent audience performance with minimal variation (2.6-2.9x ROAS range), suggesting that these channels should focus on creative optimization and targeting refinement regardless of audience segment. In contrast, SMS campaigns exhibit clear audience differentiation, with All Users and New Users delivering the highest performance (2.6-2.8x ROAS). Inactive users deliver weaker performance at 2.5x ROAS. These suggest that SMS messaging strategies may not be effectively engaging dormant users. Organizations should reexamine SMS campaigns or shift toward higher-performing channels to achieve optimal ROAS outcomes.
-    <br>
-    7.  **Return on Investment (ROI)**
+
+    8.  **Return on Investment (ROI)**
 
         -   ROI is another profitability metric measuring the overall profit after accounting for all associated costs. It represents the marketing effort of a campaign after all expenses. To calculate ROI, the formula is
 
@@ -233,12 +240,12 @@ The dataset contains 5,400 campaign records spanning March 2023 to November 2024
                 <td style="border: none;">
                     <ul>
                         <li>
-                            <b>App Push Notifications</b> demonstrate moderate cost-effectiveness with CPAs ranging from \$48-70 and ROI between 87-138%. This channel excels at acquiring New Users, offering the lowest CPA (\$48.40) and a solid conversion rate (10.43%) for this audience segment. However, App Push becomes the least favorable option for Inactive users, with the highest CPA (\$70.47) across all channels targeting this group.
+                            <b>App Push Notifications</b> demonstrate moderate cost-effectiveness with CPAs ranging from $48-70 and ROI between 87-138%. This channel excels at acquiring New Users, offering the lowest CPA ($48.40) and a solid conversion rate (10.43%) for this audience segment. However, App Push becomes the least favorable option for Inactive users, with the highest CPA ($70.47) across all channels targeting this group.
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <b>Email</b> emerges as the most cost-effective channel overall, delivering the lowest cost-per-acquisition (\$49-60) and exceptional ROI, particularly for Premium users at 144%. However, the highest acquisition cost when targeting Inactive users (\$53.64) discourages using it despite having a strong 117.78% ROI.
+                            <b>Email</b> emerges as the most cost-effective channel overall, delivering the lowest cost-per-acquisition ($49-60) and exceptional ROI, particularly for Premium users at 144%. However, the highest acquisition cost when targeting Inactive users ($53.64) discourages using it despite having a strong 117.78% ROI.
                         </li>
                     </ul>
                     <ul>
@@ -248,7 +255,7 @@ The dataset contains 5,400 campaign records spanning March 2023 to November 2024
                     </ul>
                     <ul>
                         <li>
-                            <b>Social Media</b> shows mixed performance with the lowest ROI range (76-94%) across all channels. Despite this limitation, it performs best for broad audience targeting (11.64% conversion rate, \$51.22 CPA) and New User acquisition (10% conversion rate, \$54.68 CPA), while maintaining relatively consistent CPAs (\$51-58) across all audience segments, making it suitable for general awareness campaigns.
+                            <b>Social Media</b> shows mixed performance with the lowest ROI range (76-94%) across all channels. Despite this limitation, it performs best for broad audience targeting (11.64% conversion rate, $51.22 CPA) and New User acquisition (10% conversion rate, $54.68 CPA), while maintaining relatively consistent CPAs ($51-58) across all audience segments, making it suitable for general awareness campaigns.
                         </li>
                     </ul>
                 </td>
@@ -273,17 +280,17 @@ The dataset contains 5,400 campaign records spanning March 2023 to November 2024
                 <td style="border: none;">
                     <ul>
                         <li>
-                            <b>App Push Notifications</b> demonstrates moderate cost-effectiveness but suffers from the highest CPAs across most segments (\$53-63), making it the least efficient option overall. While achieving reasonable performance with inactive users, App Push consistently ranks among the most expensive choices for the remaining segments, limiting strategic value despite decent ROAS performance.
+                            <b>App Push Notifications</b> demonstrates moderate cost-effectiveness but suffers from the highest CPAs across most segments ($53-63), making it the least efficient option overall. While achieving reasonable performance with inactive users, App Push consistently ranks among the most expensive choices for the remaining segments, limiting strategic value despite decent ROAS performance.
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <b>Email</b> excels specifically in New User acquisition, delivering exceptional efficiency with the lowest CPA (\$50.73), highest conversion rate (19.28%), and outstanding ROI (129.28%) for this segment among all channels. However, it becomes counterproductive for Inactive users, recording both the highest CPA (\$61.78) and poorest ROI (75.31%), making audience selection critical for Email campaign success.
+                            <b>Email</b> excels specifically in New User acquisition, delivering exceptional efficiency with the lowest CPA ($50.73), highest conversion rate (19.28%), and outstanding ROI (129.28%) for this segment among all channels. However, it becomes counterproductive for Inactive users, recording both the highest CPA ($61.78) and poorest ROI (75.31%), making audience selection critical for Email campaign success.
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <b>SMS</b> emerges as the most reliable and cost-effective channel overall, maintaining competitive CPAs (\$46-54) and delivering consistent ROAS (2.63-2.77x) and ROI (98-120%) across all target audiences. This consistency demonstrates exceptional predictability of returns, positioning SMS as an ideal backbone channel for broad audience strategies where reliable performance matters more than peak efficiency in specific segments.
+                            <b>SMS</b> emerges as the most reliable and cost-effective channel overall, maintaining competitive CPAs ($46-54) and delivering consistent ROAS (2.63-2.77x) and ROI (98-120%) across all target audiences. This consistency demonstrates exceptional predictability of returns, positioning SMS as an ideal backbone channel for broad audience strategies where reliable performance matters more than peak efficiency in specific segments.
                         </li>
                     </ul>
                     <ul>
@@ -318,17 +325,17 @@ The dataset contains 5,400 campaign records spanning March 2023 to November 2024
                     </ul>
                     <ul>
                         <li>
-                            <b>Email</b> shows moderate cost-effectiveness with CPAs ranging from \$46-65 and ROI between 90.57-128.45%. The channel achieves strong click-through rates (10.99-11.75%) across most audiences, except premium users (9.61%). However, cost efficiency analysis reveals the channel as the best suited for new user acquisition (\$46.66 CPA, 128.45% ROI), as other segments show higher acquisition costs (\$53.98-65.71) and diminished returns (90.57-100.65% ROI).
+                            <b>Email</b> shows moderate cost-effectiveness with CPAs ranging from $46-65 and ROI between 90.57-128.45%. The channel achieves strong click-through rates (10.99-11.75%) across most audiences, except premium users (9.61%). However, cost efficiency analysis reveals the channel as the best suited for new user acquisition ($46.66 CPA, 128.45% ROI), as other segments show higher acquisition costs ($53.98-65.71) and diminished returns (90.57-100.65% ROI).
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <b>SMS</b> emerges as the most cost-efficient channel, delivering the lowest CPAs (\$43-59) across all target segments while maintaining solid ROI performance (84-109%). This channel particularly excels in reactivating inactive users, achieving the highest ROI (108.29%) and lowest CPA (\$43.94) of any channel targeting this segment.
+                            <b>SMS</b> emerges as the most cost-efficient channel, delivering the lowest CPAs ($43-59) across all target segments while maintaining solid ROI performance (84-109%). This channel particularly excels in reactivating inactive users, achieving the highest ROI (108.29%) and lowest CPA ($43.94) of any channel targeting this segment.
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <b>Social Media</b> offers similar acquisition costs to email (\$49-67) but provides more consistent conversion rates (8.92-10.71%) across all audiences. For broad audience targeting, social media outperforms Email with higher conversion rates (9.55% vs. 8.45%) at comparable costs (\$66.67 vs. \$65.71 CPA), making it the preferred choice for wide-reach campaigns.
+                            <b>Social Media</b> offers similar acquisition costs to email ($49-67) but provides more consistent conversion rates (8.92-10.71%) across all audiences. For broad audience targeting, social media outperforms Email with higher conversion rates (9.55% vs. 8.45%) at comparable costs ($66.67 vs. $65.71 CPA), making it the preferred choice for wide-reach campaigns.
                         </li>
                     </ul>
                 </td>
@@ -353,22 +360,22 @@ The dataset contains 5,400 campaign records spanning March 2023 to November 2024
                 <td style="border: none;">
                     <ul>
                         <li>
-                            <b>App Push Notifications</b> delivers exceptional performance for specific audience segments with clear strategic advantages. The channel achieves outstanding results for new user acquisition, recording the highest ROI (125.74%) and CVR (11.40%) among all channels targeting this segment. For broad audience campaigns, App demonstrates superior cost-effectiveness with the highest conversion rate (12.04%) and lowest acquisition cost (\$45.18) across all channels. This positions App as the optimal choice for new user acquisition and scalable broad-market strategies, though it underperforms when targeting inactive or premium user segments.
+                            <b>App Push Notifications</b> delivers exceptional performance for specific audience segments with clear strategic advantages. The channel achieves outstanding results for new user acquisition, recording the highest ROI (125.74%) and CVR (11.40%) among all channels targeting this segment. For broad audience campaigns, App demonstrates superior cost-effectiveness with the highest conversion rate (12.04%) and lowest acquisition cost ($45.18) across all channels. This positions App as the optimal choice for new user acquisition and scalable broad-market strategies, though it underperforms when targeting inactive or premium user segments.
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <b>Email</b> emerges as the premium audience specialist and overall ROI leader. When targeting premium users, it achieves the lowest acquisition cost (\$46.77), highest ROI (125.80%), and near-peak conversion rate (11.90%) among competing channels. For a broad audience targeting, it delivers exceptional value with the highest ROI (153.18%), strong conversion performance (11.19%), and competitive acquisition costs (\$52.51). However, the channel shows limitations with inactive users, where higher acquisition costs (\$64.11) and lower conversion rates (8.87%) reduce its effectiveness for reactivation campaigns.
+                            <b>Email</b> emerges as the premium audience specialist and overall ROI leader. When targeting premium users, it achieves the lowest acquisition cost ($46.77), highest ROI (125.80%), and near-peak conversion rate (11.90%) among competing channels. For a broad audience targeting, it delivers exceptional value with the highest ROI (153.18%), strong conversion performance (11.19%), and competitive acquisition costs ($52.51). However, the channel shows limitations with inactive users, where higher acquisition costs ($64.11) and lower conversion rates (8.87%) reduce its effectiveness for reactivation campaigns.
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <b>SMS</b> dominates user engagement metrics with click-through rates ranging from 9.44% to 11.71%, but demands premium investment per acquisition (\$49-68). While matching acquisition costs of Email and conversion rates for premium users, SMS significantly underperforms in ROI (66.99% vs. 125.80%). Despite achieving the highest engagement rate (11.71%) for broad audience targeting, SMS records the lowest conversion performance (7.14%) for this segment. The channel's high engagement but variable conversion efficiency requires precise audience selection to justify its premium costs.
+                            <b>SMS</b> dominates user engagement metrics with click-through rates ranging from 9.44% to 11.71%, but demands premium investment per acquisition ($49-68). While matching acquisition costs of Email and conversion rates for premium users, SMS significantly underperforms in ROI (66.99% vs. 125.80%). Despite achieving the highest engagement rate (11.71%) for broad audience targeting, SMS records the lowest conversion performance (7.14%) for this segment. The channel's high engagement but variable conversion efficiency requires precise audience selection to justify its premium costs.
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <b>Social Media</b> provides balanced engagement comparable to SMS, with click-through rates spanning 9.05% to 11.79%. The channel excels specifically for inactive user reactivation, delivering the highest ROI (122.29%), peak engagement (11.79%), and lowest acquisition cost (\$44.94) among channels targeting this segment. However, Social Media struggles with premium and broad audiences due to elevated acquisition costs (\$61.81 for premium, \$61.15 for general audiences) and the lowest ROI performance (64.18% for premium, 65.98% for general audiences), limiting its effectiveness beyond reactivation strategies.
+                            <b>Social Media</b> provides balanced engagement comparable to SMS, with click-through rates spanning 9.05% to 11.79%. The channel excels specifically for inactive user reactivation, delivering the highest ROI (122.29%), peak engagement (11.79%), and lowest acquisition cost ($44.94) among channels targeting this segment. However, Social Media struggles with premium and broad audiences due to elevated acquisition costs ($61.81 for premium, $61.15 for general audiences) and the lowest ROI performance (64.18% for premium, 65.98% for general audiences), limiting its effectiveness beyond reactivation strategies.
                         </li>
                     </ul>
                 </td>
@@ -391,22 +398,22 @@ The dataset contains 5,400 campaign records spanning March 2023 to November 2024
                 <td style="border: none;">
                     <ul>
                         <li>
-                            <b>App Push Notifications</b> delivers consistent, moderate performance across all metrics. With ROI ranging from 76.71% to 107.17%, the channel demonstrates reliable profitability. While CPA levels (\$53.19-61.50) are comparable to other channels, App push notifications achieve the highest conversion rate at 12.44% for broad audience targeting. This highest conversion rate makes it particularly effective for converting engaged users who already have the application installed, though it may have limited reach compared to other channels.
+                            <b>App Push Notifications</b> delivers consistent, moderate performance across all metrics. With ROI ranging from 76.71% to 107.17%, the channel demonstrates reliable profitability. While CPA levels ($53.19-61.50) are comparable to other channels, App push notifications achieve the highest conversion rate at 12.44% for broad audience targeting. This highest conversion rate makes it particularly effective for converting engaged users who already have the application installed, though it may have limited reach compared to other channels.
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <b>Email</b> demonstrates strong overall performance with the highest ROI at 122.79% for broad audiences, though cost efficiency varies significantly across segments. While the channel's CPA ranges from \$51.50 to \$71.94, with inactive users requiring the highest investment, it delivers substantial value through its comprehensive messaging capabilities. The channel excels at delivering detailed promotional content directly to users' inboxes, making it particularly effective for complex flash sale communications that require extensive product information. Email performs best with broad audience targeting and active user segments. The combination of high engagement and strong conversion rates justifies the investment even for inactive users despite the demands for higher acquisition costs.
+                            <b>Email</b> demonstrates strong overall performance with the highest ROI at 122.79% for broad audiences, though cost efficiency varies significantly across segments. While the channel's CPA ranges from $51.50 to $71.94, with inactive users requiring the highest investment, it delivers substantial value through its comprehensive messaging capabilities. The channel excels at delivering detailed promotional content directly to users' inboxes, making it particularly effective for complex flash sale communications that require extensive product information. Email performs best with broad audience targeting and active user segments. The combination of high engagement and strong conversion rates justifies the investment even for inactive users despite the demands for higher acquisition costs.
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <b>SMS</b> emerges as the engagement leader with consistently high performance across all audience segments. The channel achieves the highest click-through rates (12.08% for broad audiences) while maintaining competitive conversion rates (9.59-11.02%). Most notably, SMS offers the lowest CPA for broad targeting at \$47.53 and demonstrates superior cost-effectiveness for inactive user reactivation (\$51.89 CPA with 11.02% CVR). This combination of high engagement and cost efficiency makes SMS ideal for time-sensitive flash sale communications.
+                            <b>SMS</b> emerges as the engagement leader with consistently high performance across all audience segments. The channel achieves the highest click-through rates (12.08% for broad audiences) while maintaining competitive conversion rates (9.59-11.02%). Most notably, SMS offers the lowest CPA for broad targeting at $47.53 and demonstrates superior cost-effectiveness for inactive user reactivation ($51.89 CPA with 11.02% CVR). This combination of high engagement and cost efficiency makes SMS ideal for time-sensitive flash sale communications.
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <b>Social Media</b> shows the most varied performance, excelling particularly in new user acquisition with an exceptional 155.03% ROI. The channel maintains competitive engagement rates (9.97-12.28% CTR) and offers consistently low CPAs (\$48.88-54.09) across all segments. However, performance varies significantly by audience type, with broad audience targeting showing lower ROI (68.76%) compared to specialized segments. Social Media proves most valuable for expanding customer base and reaching premium users, where it achieves the optimal combination of low cost (\$48.88 CPA) and high engagement (12.28% CTR).
+                            <b>Social Media</b> shows the most varied performance, excelling particularly in new user acquisition with an exceptional 155.03% ROI. The channel maintains competitive engagement rates (9.97-12.28% CTR) and offers consistently low CPAs ($48.88-54.09) across all segments. However, performance varies significantly by audience type, with broad audience targeting showing lower ROI (68.76%) compared to specialized segments. Social Media proves most valuable for expanding customer base and reaching premium users, where it achieves the optimal combination of low cost ($48.88 CPA) and high engagement (12.28% CTR).
                         </li>
                     </ul>
                 </td>
@@ -435,17 +442,17 @@ The dataset contains 5,400 campaign records spanning March 2023 to November 2024
                     </ul>
                     <ul>
                         <li>
-                            <b>Email</b> proves highly effective for engaging active users and new member acquisition, delivering strong ROI between 115.67-121.17% with competitive conversion rates (9.40-10.13%) and reasonable CPAs (\$52-56). The channel dominates engagement metrics across all platforms, achieving CTR rates of 10.08-13.66%, with particularly outstanding performance in new user engagement at 13.66% CTR. However, it shows significant limitations for dormant user reactivation, recording the lowest ROI at 58.23% and the highest CPA at \$70.40. This performance profile positions it as the optimal channel for expanding an active membership base, but it is unsuitable for re-engagement campaigns.
+                            <b>Email</b> proves highly effective for engaging active users and new member acquisition, delivering strong ROI between 115.67-121.17% with competitive conversion rates (9.40-10.13%) and reasonable CPAs ($52-56). The channel dominates engagement metrics across all platforms, achieving CTR rates of 10.08-13.66%, with particularly outstanding performance in new user engagement at 13.66% CTR. However, it shows significant limitations for dormant user reactivation, recording the lowest ROI at 58.23% and the highest CPA at $70.40. This performance profile positions it as the optimal channel for expanding an active membership base, but it is unsuitable for re-engagement campaigns.
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <b>SMS</b> delivers consistent moderate performance across most segments, with balanced CPA (\$49-67), ROI (78.61-107.06%), and CTR (8.90-11.40%) metrics. The channel's strength lies in the premium segment, where it achieves impressive results with 11.60% CVR, 107.06% ROI, and competitive \$50.86 CPA. The performance of the premium segment significantly outpaces other channels, establishing SMS as the preferred channel for high-value customer acquisition and premium membership conversions.
+                            <b>SMS</b> delivers consistent moderate performance across most segments, with balanced CPA ($49-67), ROI (78.61-107.06%), and CTR (8.90-11.40%) metrics. The channel's strength lies in the premium segment, where it achieves impressive results with 11.60% CVR, 107.06% ROI, and a competitive $50.86 CPA. The performance of the premium segment significantly outpaces other channels, establishing SMS as the preferred channel for high-value customer acquisition and premium membership conversions.
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <b>Social Media</b> demonstrates more modest engagement rates with CTR ranging 7.68-9.88%, positioning it behind other channels in initial user attraction. It achieves a competitive conversion performance of around 8.59%-11.86%. Social Media's key advantage lies in cost-effective inactive user reactivation, offering the lowest CPA at \$49.16 compared to competitors (\$65.39-77.63) while achieving the highest inactive user CVR at 11.86% versus others (5.93-11.06%). This lower CPA makes Social Media the most economical choice for reactivating dormant users in membership drive campaigns.
+                            <b>Social Media</b> demonstrates more modest engagement rates with CTR ranging 7.68-9.88%, positioning it behind other channels in initial user attraction. It achieves a competitive conversion performance of around 8.59%-11.86%. Social Media's key advantage lies in cost-effective inactive user reactivation, offering the lowest CPA at $49.16 compared to competitors ($65.39-77.63) while achieving the highest inactive user CVR at 11.86% versus others (5.93-11.06%). This lower CPA makes Social Media the most economical choice for reactivating dormant users in membership drive campaigns.
                         </li>
                     </ul>
                 </td>
@@ -469,22 +476,22 @@ The dataset contains 5,400 campaign records spanning March 2023 to November 2024
                 <td style="border: none;">
                     <ul>
                         <li>
-                            <b>App Push Notifications</b> demonstrates a high-investment, high-reward profile with CPA ranging from \$46.17-78.61 and ROI spanning 79.01-105.54%. The channel shows significant audience segmentation, making strategic targeting crucial for campaign success. Premium segment performance requires careful consideration due to suboptimal metrics: moderate conversion rate (7.52%), highest CPA (\$78.61), and lowest ROI (79.01%). However, the channel excels in reactivating inactive users, delivering the strongest performance across all metrics - lowest CPA (\$46.17), highest ROI (105.54%), peak CTR (12.20%), and strong CVR (10.64%). This distinct performance profile establishes app push notification as the premier choice for inactive user reactivation campaigns.
+                            <b>App Push Notifications</b> demonstrates a high-investment, high-reward profile with CPA ranging from $46.17-78.61 and ROI spanning 79.01-105.54%. The channel shows significant audience segmentation, making strategic targeting crucial for campaign success. Premium segment performance requires careful consideration due to suboptimal metrics: moderate conversion rate (7.52%), highest CPA ($78.61), and lowest ROI (79.01%). However, the channel excels in reactivating inactive users, delivering the strongest performance across all metrics - lowest CPA ($46.17), highest ROI (105.54%), peak CTR (12.20%), and strong CVR (10.64%). This distinct performance profile establishes app push notification as the premier choice for inactive user reactivation campaigns.
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <b>Email</b> maintains cost-effectiveness with CPA between \$46-60, ROI of 67-99%, and CVR ranging 7.96-12.01%. The channel demonstrates superior engagement capabilities, particularly at capturing the attention of premium users (12.66% CTR) and inactive users (11.16% CTR). While achieving the highest conversion rate for broad audiences (12.01%), Email paradoxically delivers the lowest ROI for this segment (67.72%). This performance contradiction positions it as an engagement optimization tool rather than a primary revenue driver, making it ideal for nurturing campaigns and audience warming strategies.
+                            <b>Email</b> maintains cost-effectiveness with CPA between $46-60, ROI of 67-99%, and CVR ranging 7.96-12.01%. The channel demonstrates superior engagement capabilities, particularly at capturing the attention of premium users (12.66% CTR) and inactive users (11.16% CTR). While achieving the highest conversion rate for broad audiences (12.01%), Email paradoxically delivers the lowest ROI for this segment (67.72%). This performance contradiction positions it as an engagement optimization tool rather than a primary revenue driver, making it ideal for nurturing campaigns and audience warming strategies.
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <b>SMS</b> exhibits a dual-performance personality with exceptional results for engaged audiences but poor inactive user metrics. For active user segments, it delivers outstanding cost-effectiveness: low CPA (\$45-50), strong ROI (84.79-129.33%), and high CVR (10.03-12.32%). The channel achieves peak performance with premium users (129.33% ROI) and new users (12.32% CVR). Conversely, inactive user targeting proves counterproductive with elevated investment (\$68.17), diminished returns (31.29% ROI), and weak engagement (7.91% CTR). This stark performance contrast makes SMS the optimal channel for an engaged audience, while it is the least suitable for the dormant user segment.
+                            <b>SMS</b> exhibits a dual-performance personality with exceptional results for engaged audiences but poor inactive user metrics. For active user segments, it delivers outstanding cost-effectiveness: low CPA ($45-50), strong ROI (84.79-129.33%), and high CVR (10.03-12.32%). The channel achieves peak performance with premium users (129.33% ROI) and new users (12.32% CVR). Conversely, inactive user targeting proves counterproductive with elevated investment ($68.17), diminished returns (31.29% ROI), and weak engagement (7.91% CTR). This stark performance contrast makes SMS the optimal channel for an engaged audience, while it is the least suitable for the dormant user segment.
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <b>Social Media</b> emerges as the most versatile and cost-efficient channel with CPA spanning \$43.43-55.03, delivering consistent high returns (73.22-123.25% ROI) and stable performance metrics (8.78-11.38% CTR, 8.87-10.63% CVR). The channel demonstrates exceptional broad-audience optimization, achieving the lowest CPA ($43.43) and highest ROI (123.25%) when targeting all user groups while maintaining competitive engagement rates (10.70% CTR, 10.63% CVR). This balanced performance profile across all segments makes social media the most economical and reliable choice for comprehensive campaign reach and consistent returns.
+                            <b>Social Media</b> emerges as the most versatile and cost-efficient channel with CPA spanning $43.43-55.03, delivering consistent high returns (73.22-123.25% ROI) and stable performance metrics (8.78-11.38% CTR, 8.87-10.63% CVR). The channel demonstrates exceptional broad-audience optimization, achieving the lowest CPA ($43.43) and highest ROI (123.25%) when targeting all user groups while maintaining competitive engagement rates (10.70% CTR, 10.63% CVR). This balanced performance profile across all segments makes social media the most economical and reliable choice for comprehensive campaign reach and consistent returns.
                         </li>
                     </ul>
                 </td>
@@ -508,17 +515,17 @@ The dataset contains 5,400 campaign records spanning March 2023 to November 2024
                 <td style="border: none;">
                     <ul>
                         <li>
-                            <b>App Push Notifications</b> demonstrates strong cost-effectiveness with CPA ranging \$48 to \$60, ROI of 71.58-126.86%, CTR of 8.27-11.79%, and CVR of 8.78-11.11%. The channel excels particularly in new user acquisition, delivering the highest ROI (126.86%) and CTR (11.79%) while maintaining the lowest cost (\$48.52) among all channels targeting this segment. This cost-efficiency establishes app notifications as the optimal choice for new user engagement.
+                            <b>App Push Notifications</b> demonstrates strong cost-effectiveness with CPA ranging $48 to $60, ROI of 71.58-126.86%, CTR of 8.27-11.79%, and CVR of 8.78-11.11%. The channel excels particularly in new user acquisition, delivering the highest ROI (126.86%) and CTR (11.79%) while maintaining the lowest cost ($48.52) among all channels targeting this segment. This cost-efficiency establishes app notifications as the optimal choice for new user engagement.
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <b>Email</b> exhibits consistent performance across all user segments with CTR of 9.99-10.52% at competitive investment levels (\$47-53 CPA). The channel's exceptional strength lies in reactivating inactive users, generating the highest ROI (177.69%) while requiring the lowest acquisition cost (\$47.81 vs. \$52.22-59.82 for competing channels). This superior cost-to-performance ratio makes it the premier channel for reengaging dormant users.
+                            <b>Email</b> exhibits consistent performance across all user segments with CTR of 9.99-10.52% at competitive investment levels ($47-53 CPA). The channel's exceptional strength lies in reactivating inactive users, generating the highest ROI (177.69%) while requiring the lowest acquisition cost ($47.81 vs. $52.22-59.82 for competing channels). This superior cost-to-performance ratio makes it the premier channel for reengaging dormant users.
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <b>SMS</b> displays highly targeted effectiveness with significant audience-dependent performance variations. For premium users, SMS serves as an efficient engagement tool, achieving excellent CTR (10.21%) and CVR (10.19%) at the lowest segment cost (\$48.42). However, performance deteriorates substantially for broader audiences, showing moderate engagement metrics while demanding the highest investment (\$70.00 CPA). This performance disparity positions SMS as a specialized tool best reserved for high-value customer segments.
+                            <b>SMS</b> displays highly targeted effectiveness with significant audience-dependent performance variations. For premium users, SMS serves as an efficient engagement tool, achieving excellent CTR (10.21%) and CVR (10.19%) at the lowest segment cost ($48.42). However, performance deteriorates substantially for broader audiences, showing moderate engagement metrics while demanding the highest investment ($70.00 CPA). This performance disparity positions SMS as a specialized tool best reserved for high-value customer segments.
                         </li>
                     </ul>
                     <ul>
@@ -547,17 +554,17 @@ The dataset contains 5,400 campaign records spanning March 2023 to November 2024
                 <td style="border: none;">
                     <ul>
                         <li>
-                            <b>App Push Notifications</b> exhibits two distinct performance patterns based on audience targeting. It delivers exceptional results for new user acquisition, achieving the highest conversion rate (11.96% CVR) and strongest returns (104.30% ROI) among all channels targeting this segment, while maintaining high engagement (9.02% CTR) and cost-efficiency (\$47.17 CPA). However, when targeting other audience groups, app push requires significantly higher investment (\$60-67 CPA) despite generating solid conversion rates (10.14-12.35% CVR), warranting careful budget consideration for these campaigns.
+                            <b>App Push Notifications</b> exhibits two distinct performance patterns based on audience targeting. It delivers exceptional results for new user acquisition, achieving the highest conversion rate (11.96% CVR) and strongest returns (104.30% ROI) among all channels targeting this segment, while maintaining high engagement (9.02% CTR) and cost-efficiency ($47.17 CPA). However, when targeting other audience groups, app push requires significantly higher investment ($60-67 CPA) despite generating solid conversion rates (10.14-12.35% CVR), warranting careful budget consideration for these campaigns.
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <b>Email</b> emerges as the most cost-effective channel overall, with acquisition costs ranging from \$42-50 while delivering the highest returns (96.65-149.19% ROI) across all channels. It particularly excels with inactive users, generating 149.19% ROI compared to 72.21-91.28% for other audiences. Email achieves peak engagement with premium users (11.57% CTR) and demonstrates superior reactivation capabilities for dormant users (13.45% CVR). This performance profile establishes it as the optimal choice for campaigns toward inactive users.
+                            <b>Email</b> emerges as the most cost-effective channel overall, with acquisition costs ranging from $42-50 while delivering the highest returns (96.65-149.19% ROI) across all channels. It particularly excels with inactive users, generating 149.19% ROI compared to 72.21-91.28% for other audiences. Email achieves peak engagement with premium users (11.57% CTR) and demonstrates superior reactivation capabilities for dormant users (13.45% CVR). This performance profile establishes it as the optimal choice for campaigns toward inactive users.
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <b>SMS</b> mirrors audience-specific performance characteristics of app push notifications, demonstrating both high effectiveness and cost variability. For inactive users, SMS achieves strong engagement (10.93% CTR) and conversion (11.59% CVR) metrics at the lowest cost point (\$49.23 CPA). While it generates the highest ROI for premium users (148.03% vs. 78.29-117.61%), this performance comes at a premium cost (\$62.07 vs. \$49.61-60.15 CPA), making SMS financially unjustifiable for broad premium user campaigns.
+                            <b>SMS</b> mirrors audience-specific performance characteristics of app push notifications, demonstrating both high effectiveness and cost variability. For inactive users, SMS achieves strong engagement (10.93% CTR) and conversion (11.59% CVR) metrics at the lowest cost point ($49.23 CPA). While it generates the highest ROI for premium users (148.03% vs. 78.29-117.61%), this performance comes at a premium cost ($62.07 vs. $49.61-60.15 CPA), making SMS financially unjustifiable for broad premium user campaigns.
                         </li>
                     </ul>
                     <ul>
@@ -587,11 +594,11 @@ The dataset contains 5,400 campaign records spanning March 2023 to November 2024
 
         - **Financial KPIs**
             - **Return On Investment (ROI)** shows the most dramatic variation in both seasonal and weekly. Seasonally, ROI follows quarterly patterns with a massive seasonal spike in Q4, peaking at 155.33% in November, while experiencing the steepest decline in Q2 with the lowest performance of 61.68% in June. Weekly patterns reveal strategic opportunities, with ROI surging on Wednesdays and Fridays before stabilizing in the 85-100% range across remaining weekdays.
-            - **Cost-Per-Acquisition (CPA)** displays more moderate fluctuation in both weekly and annual. The seasonal pattern peaks in May at \$100.42, representing acquisition challenges prior to the monsoon season, while August delivers the optimal cost-efficiency at \$63.16, aligning with the post-monsoon re-engagement of the regional market.
+            - **Cost-Per-Acquisition (CPA)** displays more moderate fluctuation in both weekly and annual. The seasonal pattern peaks in May at $100.42, representing acquisition challenges before the monsoon season, while August delivers the optimal cost-efficiency at $63.16, aligning with the post-monsoon re-engagement of the regional market.
         - **Performance KPIs**
             - **Click-Through-Rate (CTR)** reaches its peak in November at 13.55%, above the typical 8.92-11.01% range, reflecting the festival-season engagement. CTR also exhibits a weekly pattern on Saturday, with CTR jumping to 12.52% from the weekly average of 8.55-10.70%. This CTR swing indicates the users' availability for campaign exploration during the weekend.
             - **Conversion Rate (CVR)** exhibits distinct seasonal shifts that correspond with local behavioral patterns, spiking notably in March (14.38%) and December (13.02%) from the average of 8.82-11.71%. These trends align with fiscal year-end spending and post-Diwali purchasing, respectively
-    <br>
+
     2. **Categorical Promotion**
 
         <table>
@@ -607,11 +614,11 @@ The dataset contains 5,400 campaign records spanning March 2023 to November 2024
 
         - **Financial KPIs**
             - **Return On Investment (ROI)** illustrates significant weekly and annual variations. Annually, ROI peaks in November at 134.73%, coinciding with the festive shopping period when grocery and essential purchases surge. Conversely, ROI drops to its lowest in March at 65.04%, reflecting the post-Holi spending fatigue and budget constraints during the financial year-end period. Weekly patterns show strong performance on Thursday (122.29%) and Monday (117.08%), while Friday records the weakest performance at 66.55%. Although counterintuitive, the cause for Friday's decline tends to be the targeted groups' preferences for dining out and offline shopping on Friday.
-            - **Cost-Per-Acquisition (CPA)** trends upward over the year, indicating intensifying competition. CPA also displays moderate fluctuations both seasonally and weekly. Annual pattern reveals the inverse correlation between CPA and ROI, especially during Q3 (October-December) and Q4 (January-March), while stabilizing around \$80-88 on the remaining period. CPA peaks in December at \$103.22, while reaching its minimum in April at \$60.80. Weekly CPA variations are moderate, with Wednesday showing the most expensive day for acquisition (\$96.43), suggesting intensified competitive bidding.
+            - **Cost-Per-Acquisition (CPA)** trends upward over the year, indicating intensifying competition. CPA also displays moderate fluctuations both seasonally and weekly. Annual pattern reveals the inverse correlation between CPA and ROI, especially during Q3 (October-December) and Q4 (January-March), while stabilizing around $80-88 on the remaining period. CPA peaks in December at $103.22, while reaching its minimum in April at $60.80. Weekly CPA variations are moderate, with Wednesday showing the most expensive day for acquisition ($96.43), suggesting intensified competitive bidding.
         - **Performance KPIs**
             - **Click-Through-Rate (CTR)** remains monthly stable between 9-11% with a slight drop to 8.1% in February. On the other hand, the weekly pattern reveals notable variation. CTR peaks on Friday at 11.92% when browsing intent is highest. It reaches its lowest on Wednesday at 8.92%, indicating a mid-week engagement challenge.
             - **Conversion Rate (CVR)** displays a quarterly mid-period drop, with a notable exception in Q4 (January-March), where February achieves the annual peak at 12.89%, despite generating the lowest ROI. Weekly CVR remains consistent between 8.89-10.81%, with a minimal Saturday rise to 11.79%. Minor ascent corresponds with the leisure browsing behavior typical of an urban lifestyle.
-    <br>
+
     3. **Campaign Notification**
 
         <table>
@@ -627,11 +634,11 @@ The dataset contains 5,400 campaign records spanning March 2023 to November 2024
 
         - **Financial KPIs**
             - **Return On Investment (ROI)** demonstrates distinct seasonal variation with two peak performance periods: November (125.33%), driven by increased festive shopping demand, and April (117.06%), corresponding to rising demand for convenience during the summer heat. ROI gradually declines after April, reaching the lowest point at 70.37% in September before recovering thereafter. This downward trend aligns with the challenges of the monsoon season on delivery operations and customer demands. Weekly variations show a Friday peak at 113.17%, suggesting pre-weekend shopping behavior. ROI gradually dropped through the week before reaching the lowest point on Thursday (88.14%).
-            - **Cost-Per-Acquisition (CPA)** shows an upward annual trend, indicating intensifying market competition. March requires maximum acquisition spending at \$98.22, while January shows the minimum of \$57.10. Weekly patterns fluctuate between \$71.30-93.14, with Tuesday (\$93.14) being the most expensive and Thursday (\$71.30) the cheapest day.
+            - **Cost-Per-Acquisition (CPA)** shows an upward annual trend, indicating intensifying market competition. March requires maximum acquisition spending at $98.22, while January shows the minimum of $57.10. Weekly patterns fluctuate between $71.30-93.14, with Tuesday ($93.14) being the most expensive and Thursday ($71.30) the cheapest day.
         - **Performance KPIs**
-            - **Click-Through-Rate (CTR)** illustrates a quarterly downward trend with a periodic recovery at each quarter's beginning. The exception occurs in Q1 (March-June), where CTR rises to its annual peak at 12.06% in June. Weekly CTR gradually increases before peaking on Saturday at 11.95%. This trend indicates weekend peak traffic aligns with urban lifestyle shopping behavior.
+            - **Click-Through-Rate (CTR)** illustrates a quarterly downward trend with a periodic recovery at each quarter's beginning. The exception occurs in Q1 (March-June), where CTR rises to its annual peak at 12.06% in June. Weekly CTR gradually increases before peaking on Saturday at 11.95%. This trend indicates that weekend peak traffic aligns with urban lifestyle shopping behavior.
             - **Conversion Rate (CVR)** displays a distinct quarterly performance pattern: Q3 (October-December) and Q4 (January-March) maintain consistent performance. Q1 (April-June) shows a downward trend despite high traffic, while Q2 (July-September) demonstrates recovery during the monsoon period. CVR peaks at 11.04% in May but plunges significantly to 7.84% as Q1 concludes in June. Weekly patterns show a Thursday peak at 10.83% before dropping to 7.83% on Friday despite high traffic. The gap between peak CTR and CVR indicates customers' behavior: ext
-    <br>
+
     4. **Festival Offer**
 
         <table>
@@ -648,12 +655,12 @@ The dataset contains 5,400 campaign records spanning March 2023 to November 2024
         - **Financial KPIs**
 
             - **Return On Investment (ROI)** expresses distinct seasonal patterns with two contrasting phases. The campaign experiences downward trends during Q1 (April-June) and Q2 (July-September), culminating in the performance at 64.19% in September. This decline corresponds to the absence of major festivals and weather disruptions during this period. Conversely, the upward trends in Q3 (October-December) and Q4 (January-March) correspond with ROI surging to 134.77% in December. The upward trend during peak festive shopping periods demonstrates that consumer demand intensifies significantly. Weekly pattern reveals two performance peaks on Wednesday at 102.15% and Saturday (102.12%). However, Thursday and Sunday present concerning drops to 71.59% and 79.72% respectively, suggesting operational bottlenecks or inventory challenges following the previous day's success.
-            - **Cost-Per-Acquisition (CPA)** maintains stability during H1 between \$76-86, corresponding directly with ROI, before achieving a substantial 34% reduction to \$58.31 in December. This inverse correlation with ROI creates an optimal performance convergence, indicating enhanced campaign efficiency during high-demand periods. 7-day pattern remains relatively stable between \$71.03-88.36, with Tuesday showing the lowest CPA at \$71.03. These patterns established CPA to be a seasonally sensitive metric influenced by the festival calendar and consumer behavior cycles.
+            - **Cost-Per-Acquisition (CPA)** maintains stability during H1 between $76-86, corresponding directly with ROI, before achieving a substantial 34% reduction to $58.31 in December. This inverse correlation with ROI creates an optimal performance convergence, indicating enhanced campaign efficiency during high-demand periods. 7-day pattern remains relatively stable between $71.03-88.36, with Tuesday showing the lowest CPA at $71.03. These patterns established CPA to be a seasonally sensitive metric influenced by the festival calendar and consumer behavior cycles.
 
         - **Performance KPIs**
             - **Click-Through-Rate (CTR)** demonstrates cyclical peak-and-decline patterns across three quarters, reaching between 11.37-11.53% peaks. These patterns indicate creative fatigue or audience saturation during sustained campaign periods. Q3 (October-December) presents an exception with a continuous decline to 6.99% in December. Despite having many festival activities, the declining trend indicates intensified competition or ad inventory saturation. Weekly CTR exhibits progressive weekend momentum, escalating from 9.53% on Monday to 11.57% on Sunday. The Thursday drop to 8.95% corresponds with workload peaks, while Sunday's peak capitalized on the leisure browsing behavior when users have increased availability and reduced time pressure.
             - **Conversion Rate (CVR)** shows a consistent annual upward trend, achieving a maximum performance of 15.15% in December despite reduced traffic volume. These tendencies indicate audience targeting achievement and purchase intent surge during festive seasons, especially in Q3 (October-December). Unlike CTR's Sunday peak, weekly CVR peaks on Wednesday at 11.41%, revealing a delay in the browsing-to-purchase cycle. This pattern suggests users engage in weekend discovery followed by midweek conversion, with the delay phase reflecting deliberate purchasing behavior that aligns with demographic patterns.
-    <br>
+
     5. **Flash Sale**
 
         <table>
@@ -669,11 +676,11 @@ The dataset contains 5,400 campaign records spanning March 2023 to November 2024
 
         - **Financial KPIs**
             - **Return On Investment (ROI)** expresses significant fluctuation during H1, characterized by dramatic peaks reaching 134.29% in June and 133.96% in February, contrasted by a sharp decline to 57.04% in April. This volatility indicates the critical importance of campaign-audience alignment, that well-matched campaigns lead to exceptional performances, while misaligned ones result in underperformance. Conversely, ROI remains between 94.65% and 124.26% with a gradually increasing trend in H2. The gradual upward trajectory culminates in December's peak of 124.26%, coinciding with increased traffic during the festive shopping period. Weekly variation demonstrates two peaks on Monday at 114.9% and Friday (110.63%). The pattern suggests stock buying behavior at the beginning of the week and before the weekend. Mid-week declines on Wednesday (84.87%) and weekend drop on Sunday (84.58%) indicate reduced user interest in the campaigned product categories during these periods.
-            - **Cost-Per-Acquisition (CPA)** exhibits a favorable 12% annual decline, with a peak CPA at \$101.43 in January and a lowest CPA at \$67.84 in May, demonstrating progressive campaign optimization and refined targeting strategies. Weekly CPA remains within \$72.76-87.80 range, with modest weekend increases. The weekend spike reflects intensified market competition due to increased user availability.
+            - **Cost-Per-Acquisition (CPA)** exhibits a favorable 12% annual decline, with a peak CPA at $101.43 in January and a lowest CPA at $67.84 in May, demonstrating progressive campaign optimization and refined targeting strategies. Weekly CPA remains within $72.76-87.80 range, with modest weekend increases. The weekend spike reflects intensified market competition due to increased user availability.
         - **Performance KPIs**
             - **Click-Through-Rate (CTR)** exhibits a concerning 35% annual decline following a pattern similar to ROI, especially in the H1. This metric peaks at 13.49% in January before declining to its lowest point at 8.67% in December. The trend highlights the impact of customer insights on campaign engagement performances. Weekly CTR maintains stability between 9.57-10.88%, with peak CTR on Wednesday (10.88%) despite lower ROI (84.87%) and ROAS (2.56x), suggesting a disconnect between engagement and cost-efficiency where strong engagement doesn't necessarily translate to optimal financial returns.
             - **Conversion Rate (CVR)** demonstrates a positive annual trajectory with two peaks occurring in February (12.72%) and December (12.01%), mirroring the ROI pattern with two performance peaks. The consistent performance during the summer and monsoon season indicates campaign resilience during a challenging period for Q-commerce operations. Weekly CVR, following the weekly CTR trend, achieves peak performance on Wednesday at 10.88%, indicating strong mid-week conversion efficiency.
-    <br>
+
     6. **Membership Drive**
 
         <table>
@@ -689,11 +696,11 @@ The dataset contains 5,400 campaign records spanning March 2023 to November 2024
 
         - **Financial KPIs**
             - **Return On Investment (ROI)** expresses a robust 29% annual growth tendency, achieving peak performance at 120.57% in June. The metric also shows consistent upward quarterly patterns. The exception happens in Q2 (July-September), where it decreases slightly at the end of the quarter. The sustained growth pattern reflects continuous campaign optimization and targeting refinement. Weekly pattern illustrates a peak performance on Friday at 105.10% and a nadir at 82.46% on Sunday.
-            - **Cost-Per-Acquisition (CPA)** demonstrates significant fluctuation notably during H1, with dramatic fluctuations ranging from a trench of \$63.92 in February to a peak of \$92.83 in May. The intensified volatility indicates the intensified market competition. Weekly CPA remains relatively stable within \$71.77-84.32 range. Wednesday requires the highest investment, and Sunday offers the supreme efficiency. The midweek acquisition surge suggests an intensified competitive marketing situation when customer engagement peaks.
+            - **Cost-Per-Acquisition (CPA)** demonstrates significant fluctuation, notably during H1, with dramatic fluctuations ranging from a trough of $63.92 in February to a peak of $92.83 in May. The intensified volatility indicates the intensified market competition. Weekly CPA remains relatively stable within $71.77-84.32 range. Wednesday requires the highest investment, and Sunday offers the supreme efficiency. The midweek acquisition surge suggests an intensified competitive marketing situation when customer engagement peaks.
         - **Performance KPIs**
             - **Click-Through-Rate (CTR)** experiences a concerning 17% annual decline while also exhibiting a wide range, from a 13.34% peak in January to 8.71% in August. The most alarming progress occurs in March when CTR plummets 33% from 13.13% to 8.75% within a month. The sharp decline signals potential operational or campaign strategy issues requiring immediate investigation. Weekly pattern culminates on Wednesday at 12.04%, indicating a high mid-week response to campaign messaging.
-            - **Conversion Rate (CVR)** mirrors annual CTR trajectory with a 17% reduction, achieving peak CVR at 11.25% in March before declining to the lowest point at 8.57% in December despite generating a relatively strong ROI of 117.01%. The high ROI, even having low CVR, suggests the irrelevance of conversion amount and revenue generation. It emphasizes quality over quantity: acquiring a high-spending customer is better than many minimal-spending ones. Weekly CTR exhibits an inverse correlation with CTR, reaching peak performance on Sunday at 11.66% while CTR reaches its nadir. The delay between engagement and conversion peaks reveals deliberated decision-making behavior that aligns with the user demographic.
-    <br>
+            - **Conversion Rate (CVR)** mirrors annual CTR trajectory with a 17% reduction, achieving peak CVR at 11.25% in March before declining to the lowest point at 8.57% in December despite generating a relatively strong ROI of 117.01%. The high ROI, even having a low CVR, suggests the irrelevance of conversion amount and revenue generation. It emphasizes quality over quantity: acquiring a high-spending customer is better than many minimal-spending ones. Weekly CTR exhibits an inverse correlation with CTR, reaching peak performance on Sunday at 11.66% while CTR reaches its nadir. The delay between engagement and conversion peaks reveals deliberated decision-making behavior that aligns with the user demographic.
+
     7. **New User Discount**
 
         <table>
@@ -709,13 +716,13 @@ The dataset contains 5,400 campaign records spanning March 2023 to November 2024
 
         - **Financial KPIs**
 
-            - **Return On Investment (ROI)** expresses a moderate 9.5% annual decline trajectory with dual peak performances in February (136.78%) and September (134.61%). Critical performance degradation follows these peaks, with an alarming 43% decline to 77.05% ROI in March. Another is a concerning 33% decline to 90.61% ROI in October. These dramatic fluctuations indicate potential operational bottlenecks, creative fatigue, or competitive pressure requiring prompt intervention. Weekly pattern reveals peak ROI on Monday at 103.59% despite requiring the highest investment (\$86.51) and achieving the lowest conversion rate (8.47%), indicating successful acquisition of high-valued customers to justify the premium cost. The metric reaches its weekly nadir on Wednesday at 77.69%, suggesting the campaign's mid-week campaign fatigue or intensified market competition.
-            - **Cost-Per-Acquisition (CPA)** demonstrates a modest annual decline with substantial volatility, ranging from February's exceptional efficiency of \$52.81 to May's concerning peak of \$90.33. February's competence likely stems from post-holiday consumer receptivity to new platform trials, while May's upsurge suggests intensified competition for acquiring new users during the pre-summer period. The fluctuation creates significant budget allocation challenges and campaign scaling complexities, requiring root-cause analysis and strategic optimization. Weekly variation reveals Monday as the most expensive day at \$86.51, while Saturday achieves optimal efficiency at \$65.66.
+            - **Return On Investment (ROI)** expresses a moderate 9.5% annual decline trajectory with dual peak performances in February (136.78%) and September (134.61%). Critical performance degradation follows these peaks, with an alarming 43% decline to 77.05% ROI in March. Another is a concerning 33% decline to 90.61% ROI in October. These dramatic fluctuations indicate potential operational bottlenecks, creative fatigue, or competitive pressure requiring prompt intervention. Weekly pattern reveals peak ROI on Monday at 103.59% despite requiring the highest investment ($86.51) and achieving the lowest conversion rate (8.47%), indicating successful acquisition of high-valued customers to justify the premium cost. The metric reaches its weekly nadir on Wednesday at 77.69%, suggesting the campaign's mid-week campaign fatigue or intensified market competition.
+            - **Cost-Per-Acquisition (CPA)** demonstrates a modest annual decline with substantial volatility, ranging from February's exceptional efficiency of $52.81 to May's concerning peak of $90.33. February's competence likely stems from post-holiday consumer receptivity to new platform trials, while May's upsurge suggests intensified competition for acquiring new users during the pre-summer period. The fluctuation creates significant budget allocation challenges and campaign scaling complexities, requiring root-cause analysis and strategic optimization. Weekly variation reveals Monday as the most expensive day at $86.51, while Saturday achieves optimal efficiency at $65.66.
 
         - **Performance KPIs**
             - **Click-Through-Rate (CTR)** experiences a concerning 11% annual deterioration, with peak engagement in June at 11.18%. The most alarming signal occurs during Q4 as CTR progressively declines 32% from January's 11.62% to March's 7.93%. Furthermore, August exhibits a drastic 22% downward to 8.74%, from July's 11.14%. These slumps signal engagement challenges requiring seasonal creative adaptation. Weekly pattern culminates on Monday at 11.12%, while dropping to the lowest performance on Friday (8.90%). The pattern indicates weekly ad fatigue, demanding weekly strategic optimization.
             - **Conversion Rate (CVR)** follows an annual CTR pattern with a 12% downturn. It reached the highest CVR in March at 11.98%, despite the lowest CTR. This inverse relationship between engagement traffic and conversion volume suggests a quality traffic situation. It happens when acquiring a higher number of click users, resulting from successful audience refinement and optimal traffic strategies. Conversely, December shows a challenging signal as it delivers the lowest CVR at 7.51%, a 30% worrisome slump from November's 10.70%. It is also the most expensive month in Q3 to acquire new users. Despite declining CVR and soaring CPA, the increased ROI suggests a quality-focused acquisition strategy, emphasizing the success of acquiring fewer but generating higher. Weekly CVR peaks on Thursday at 13.05% while falling short on Monday at 8.47%. The delay between CTR and CVR peaks suggests the thoughtful behavior requiring multiple touchpoints and an evaluation period before committing to a new service. This phenomenon indicates optimal target optimization because the delay demeanor aligns with the demographic of targeted users.
-    <br>
+
     8. **Referral Program**
 
         <table>
@@ -732,12 +739,12 @@ The dataset contains 5,400 campaign records spanning March 2023 to November 2024
         - **Financial KPIs**
 
             - **Return On Investment (ROI)** experiences a concerning 29% annual decline, with values between 69.37-137.13% range. The metric exhibits severe monthly fluctuations, ranging from 24% to 33% across most quarters, except for Q3 (October-December), where the ROI progressively declines before reaching a nadir of 69.48% in December. While sudden increases indicate high customer reception to the campaign, the continuing downward trend points to either campaign fatigue or misaligned targeting strategies. The weekly pattern exhibits Monday as the strongest performer, with a declining performance throughout the week, reaching its lowest point on Sunday at 86.47%.
-            - **Cost-Per-Acquisition (CPA)** demonstrates a 20% annual increase, with a concerning 40% surge in H1 to \$95.25 peak. The sudden change occurs between February (\$51.95) and March (\$86.03), representing a 40% increase in one month. This abrupt variation suggests intensified competitive pressure during the pre-summer period or internal operational challenges that require immediate strategic intervention. Weekly analysis shows Monday as the most cost-effective day at \$71.35. Wednesday demands the highest investment at \$92.35, indicating potential mid-week market saturation or the need for a refreshed creative campaign.
+            - **Cost-Per-Acquisition (CPA)** demonstrates a 20% annual increase, with a concerning 40% surge in H1 to $95.25 peak. The sudden change occurs between February ($51.95) and March ($86.03), representing a 40% increase in one month. This abrupt variation suggests intensified competitive pressure during the pre-summer period or internal operational challenges that require immediate strategic intervention. Weekly analysis shows Monday as the most cost-effective day at $71.35. Wednesday demands the highest investment at $92.35, indicating potential mid-week market saturation or the need for a refreshed creative campaign.
 
         - **Performance KPIs**
-            - **Click-Through-Rate (CTR)** expresses a promising 22% upward annual tendency, with dual performance peaks in November (11.72%) and April (11.71%) despite generating moderate ROI around \$88-97. The discrepancy between CTR and ROI suggests the need for deeper investigation into conversion pathway efficiency. Weekly CTR peaks on Monday at 11.44% before reaching its nadir on Thursday at 8.47%, coinciding with the ROI and CPA pattern of mid-week campaign fatigue.
+            - **Click-Through-Rate (CTR)** expresses a promising 22% upward annual tendency, with dual performance peaks in November (11.72%) and April (11.71%) despite generating moderate ROI around $88-97. The discrepancy between CTR and ROI suggests the need for deeper investigation into conversion pathway efficiency. Weekly CTR peaks on Monday at 11.44% before reaching its nadir on Thursday at 8.47%, coinciding with the ROI and CPA pattern of mid-week campaign fatigue.
             - **Conversion Rate (CVR)** delivers a concerning 16% annual decline despite culminating at 15.42% peak in February. The critical sign emerges in March, as CVR plummets 45%, from February's 15.42% to 8.43%, concurring with a 30% ROI failure and a 40% CPA swell. These metrics indicate a severe operational issue resulting from creative campaign fatigue or competitive pressure, prompting intensive monitoring and immediate optimization. Weekly pattern reveals peak conversion on Thursday at 11.18%, while Wednesday records the lowest CVR at 8.44% despite maintaining relatively high CTR. The gap between peak CTR and CVR suggests potential customer hesitation or delay in decision-making behavior before committing to a new service, which requires handling through enhanced nurturing strategies.
-    <br>
+
     9. **Weekend Special**
 
      <table>
@@ -753,7 +760,7 @@ The dataset contains 5,400 campaign records spanning March 2023 to November 2024
 
     -   **Financial KPIs**
         -   **Return On Investment (ROI)** delivers dramatic monthly fluctuations despite maintaining relatively consistent annual performance. The alarming declines occur in February, dropping 51% from January's 134.86% to 65.52%, and in July, plummeting 43% from June's 130.19% to July's 74.07%. These sharp declines indicate severe operational issues that require immediate attention. December performs best, with both the highest ROI (139.21%) and largest monthly increase (+33.5%), coinciding with soaring demand during the holiday shopping period. Weekly pattern shows Friday as the top performer with 119.78% ROI, while Wednesday delivers the weakest results at 73.33%.
-        -   **Cost-Per-Acquisition (CPA)** demonstrates a gradual 17% annual increase, with a notable spike to \$94.41 in February that corresponds with a 51% ROI decline. This correlation suggests either intensified competitive pressure or strategic challenges requiring prompt intervention. Despite the relatively high investment (\$80.83) in December, the month generates the highest returns (139.21% ROI), indicating successful acquisition of fewer but higher-value customers that justify the elevated acquisition cost. Weekly pattern remains particularly stable throughout most of the week, around \$68-77 before peaking on Sunday at \$82.78.
+        -   **Cost-Per-Acquisition (CPA)** demonstrates a gradual 17% annual increase, with a notable spike to $94.41 in February that corresponds with a 51% ROI decline. This correlation suggests either intensified competitive pressure or strategic challenges requiring prompt intervention. Despite the relatively high investment ($80.83) in December, the month generates the highest returns (139.21% ROI), indicating the successful acquisition of fewer but higher-value customers that justify the elevated acquisition cost. Weekly pattern remains particularly stable throughout most of the week, around $68-77 before peaking on Sunday at $82.78.
     -   **Performance KPIs**
         -   **Click-Through-Rate (CTR)** experiences a concerning 19% annual decline trajectory, ranging from a peak of 13.13% in January to a low of 8.25% in August. The most concerning drop happens between January (13.13%) and February (10.09%), representing a concerning 23% monthly decline that suggests campaign targeting issues and strategic misalignment. Weekly analysis shows peak traffic on Monday (11.19%), while Friday attracts the lowest clicks at 8.32% despite generating the highest returns (119.78% ROI), signaling decent high-value customers acquisition.
         -   **Conversion Rate (CVR)** maintains stability between 9-11% throughout most of the year, except March and April. CVR reaches its peak at 12.49% in March before declining slightly to 11.55% in April and returning to the normal range. This temporary surge suggests strong initial customer reception to campaigns, followed by declining engagement and conversion rate that may indicate campaign fatigue or shifting interest toward newer initiatives. Weekly analysis shows peak performance plateau on Thursday (12.56%) and Friday (12.46%). The gap between peak CTR and CVR timing, mirroring another campaign's, reflects a deliberate decision-making process that is consistent with the target demographic's behavior patterns.
@@ -885,7 +892,7 @@ The dataset contains 5,400 campaign records spanning March 2023 to November 2024
                 <li> May also post acquisition challenges, with peaked CPA ($100.42). Focus on nurturing current users rather than costly new user acquisition.
             </td>
             <td style="vertical-align: top">
-                <li> Allow 15% of annual budget for acquiring new users, especially in August when CPA reaches its nadir at \$63.16. Maximize app push notification targeting new users (10.43% CVR) and SMS for inactive user reactivation (134% ROI).
+                <li> Allow 15% of the annual budget for acquiring new users, especially in August when CPA reaches its nadir at $63.16. Maximize app push notification targeting new users (10.43% CVR) and SMS for inactive user reactivation (134% ROI).
                 <li> Around September, start preparing for Q3 campaigns and audience segmentation during the peak season. 
             </td>
             <td style="vertical-align: top">
@@ -897,13 +904,13 @@ The dataset contains 5,400 campaign records spanning March 2023 to November 2024
         <tr>
             <td style="vertical-align: top" rowspan=3>Weekly
             <td style="vertical-align: top">
-                <li> Monday-Tuesday: Launch week-long campaigns and strategic tone. Use January's high engagement for testing new creative concepts and audience segments. Maintain customer retention on February's low traffic. Launch campaigns about fiscal year-end benefits on March's surge.
+                <li> Monday-Tuesday: Launch week-long campaigns and strategic tone. Use January's high engagement for testing new creative concepts and audience segments. Maintain customer retention during February's low traffic. Launch campaigns about fiscal year-end benefits on March's surge.
             </td>
             <td style="vertical-align: top">
-                <li> Monday-Tuesday: Shift from acquisition to retention across entire quarter due to high CPA, using loyalty program engagement, customer stories, and value-focused messaging that doesn't required high spending
+                <li> Monday-Tuesday: Shift from acquisition to retention across the entire quarter due to high CPA, using loyalty program engagement, customer stories, and value-focused messaging that doesn't require high spending
             </td>
             <td style="vertical-align: top">
-                <li> Monday-Tuesday: Deploy new customer acquisition campaigns via app push notification for new users (10.43% CVR), especially in August when CPA is optimal. Testing broad audience for Q3 campaign optimization.
+                <li> Monday-Tuesday: Deploy new customer acquisition campaigns via app push notification for new users (10.43% CVR), especially in August when CPA is optimal. Testing a broad audience for Q3 campaign optimization.
             </td>
             <td style="vertical-align: top">
                 <li> Monday-Tuesday: Begin each week with aggressive Monday launches that build toward-end peak: premium product and high-valued segment targeting campaigns. Segment best audiences and deploy inventory-conscious campaigns.
@@ -945,7 +952,7 @@ The dataset contains 5,400 campaign records spanning March 2023 to November 2024
                 <li> Limit App push notification to less than 5% of the total budget solely for inactive user reactivation due to costly investment.
             </td>
             <td style="vertical-align: top">
-                <li> Set 20-25% of annual budget to leverage the favourable April's CPA ($60.80) by focusing on building strong customer acquisition foundations mainly through Email and sustain momentum using SMS for consistent performance and Social Media for cost-effectiveness on all users throughout the quarter. 
+                <li> Set 20-25% of annual budget to leverage the favourable April's CPA ($60.80) by focusing on building strong customer acquisition foundations mainly through Email, and sustain momentum using SMS for consistent performance and Social Media for cost-effectiveness on all users throughout the quarter. 
                 <li> Limit App push notification to less than 5% of the total budget solely for inactive user reactivation due to costly investment.
             </td>
             <td style="vertical-align: top">
@@ -1182,7 +1189,7 @@ The dataset contains 5,400 campaign records spanning March 2023 to November 2024
  				<li>Emphasize premium users during September's recovery period (110.53% ROI) by campaign Email to leverage high ROI and mid-week engagement peak. Test and optimize Q3 operational strategies and audience segmentation on all viable channels.  
  			</td>
  			<td style="vertical-align: top">
- 				<li>Wednesday-Friday: Expand premium customer base for the holiday season during October and November. Utilize Wednesday's peak CTR to maximize customer acquisition push by launching highest-valued premium membership offers and campaigns targeting premium segment via the combination of Email ($52.19 CPA, 120.15% ROI) and SMS ($50.86 CPA, 107.06% ROI, 11.60% CVR). Reactivate inactive premium users with social media campaigns ($49.16 CPA, 11.86% CVR).
+ 				<li>Wednesday-Friday: Expand premium customer base for the holiday season during October and November. Utilize Wednesday's peak CTR to maximize customer acquisition push by launching the highest-valued premium membership offers and campaigns targeting the premium segment via the combination of Email ($52.19 CPA, 120.15% ROI) and SMS ($50.86 CPA, 107.06% ROI, 11.60% CVR). Reactivate inactive premium users with social media campaigns ($49.16 CPA, 11.86% CVR).
  				<li>Deploy comprehensive premium customer value campaigns by demonstrating benefits and offers to maximize conversion rate via app push notification targeting all users ($48.55 CPA, 12.65% CVR) and social media targeting non-users ($56.83 CPA, 11.36% CVR). 
  			</td>
  		</tr>
@@ -1250,7 +1257,7 @@ The dataset contains 5,400 campaign records spanning March 2023 to November 2024
                 <li>March's concerning performance requires shifting focus to the premium segment to combat overall decline. Deploy SMS campaigns for its cost-efficiency ($47.05 CPA, 129.33% ROI, 10.03% CVR).
             </td>
             <td style="vertical-align: top">
-                <li>Wednesday-Friday: Focus mainly on existing users, notably the high-valued segment, due to high acquisition cost in April and May. Maintain active users' engagement and generate acquisition pressure with Email campaigns on Wednesday and Friday. Deploy conversion campaigns targeting the premium segment via SMS on Thursday to leverage the peak 13.05% conversion rate. Launch user-generated content and community-strengthening campaigns via social media to retain engagement traffic at a lower cost.
+                <li>Wednesday-Friday: Focus mainly on existing users, notably the high-value segment, due to high acquisition cost in April and May. Maintain active users' engagement and generate acquisition pressure with Email campaigns on Wednesday and Friday. Deploy conversion campaigns targeting the premium segment via SMS on Thursday to leverage the peak 13.05% conversion rate. Launch user-generated content and community-strengthening campaigns via social media to retain engagement traffic at a lower cost.
                 <li>June CPA ($67.91) allows expanding focus to all segments on Wednesday and Friday. Scale successful campaigns in April and May to create acquisition opportunities on Thursday. Build a relationship with existing users via consistent Email campaigns
             </td>
             <td style="vertical-align: top">
@@ -1300,7 +1307,7 @@ The dataset contains 5,400 campaign records spanning March 2023 to November 2024
         <tr>
             <td style="vertical-align: top" rowspan=3>Weekly</td>
             <td style="vertical-align: top">
-                <li>Monday-Tuesday: Launch acquisition campaigns with the strongest performing assets from December testing on Monday to leverage peak ROI (123.82%) and lowest CPA ($71.35). Deploy SMS campaigns targeting premium users on Tuesday before the mid-week surge. Analyze Monday's performances and adjust strategies accordingly on Tuesday to capitalize on spillover engagement from Monday. Focus on proven Ahigh-performance assets during peak performance rather than testing new creative assets.
+                <li>Monday-Tuesday: Launch acquisition campaigns with the strongest performing assets from December testing on Monday to leverage peak ROI (123.82%) and lowest CPA ($71.35). Deploy SMS campaigns targeting premium users on Tuesday before the mid-week surge. Analyze Monday's performances and adjust strategies accordingly on Tuesday to capitalize on spillover engagement from Monday. Focus on proven high-performance assets during peak performance rather than testing new creative assets.
                 <li>Low CPA during January and February allows aggressive acquisition campaigns. Deploy the campaigns through app push notifications on Monday to enlarge the customer base for the entire year. Shift to maintain existing users' engagement in March, when performance declines and costs skyrocket.
             </td>
             <td style="vertical-align: top">
@@ -1319,7 +1326,7 @@ The dataset contains 5,400 campaign records spanning March 2023 to November 2024
         </tr>
         <tr>
             <td style="vertical-align: top">
-                <li>Wednesday-Friday: Wednesday's peak CPA ($92.35) makes acquisition expensive; thus, focusing on existing users is required. Deploy returning campaigns targeting inactive users through Email. Maintain active users' engagement with newsletters or brand awareness content delivered via Email. Limit SMS for emergency communication with premium users. Retain audiences' engagement through user-generated content on social media. The 24.7% CTR decline despite low CPA ($72.78) on Thursday, demands focusing solely on existing users with Email for its cost-effectiveness. Thursday's low engagement is ideal for strategic optimization and the development of creative asset variations. On Friday, analyze the weekday's performance to prepare for the weekend campaign optimization while still focusing on maintaining relationships with the customers.   
+                <li>Wednesday-Friday: Wednesday's peak CPA ($92.35) makes acquisition expensive; thus, focusing on existing users is required. Deploy returning campaigns targeting inactive users through Email. Maintain active users' engagement with newsletters or brand awareness content delivered via Email. Limit SMS for emergency communication with premium users. Retain audiences' engagement through user-generated content on social media. The 24.7% CTR decline despite low CPA ($72.78) on Thursday demands focusing solely on existing users with Email for its cost-effectiveness. Thursday's low engagement is ideal for strategic optimization and the development of creative asset variations. On Friday, analyze the weekday's performance to prepare for the weekend campaign optimization while still focusing on maintaining relationships with the customers.   
             </td>
             <td style="vertical-align: top">
                 <li>Wednesday-Friday: April's peak CTR allows growth-focused strategies by emphasizing conversion from Monday's and Tuesday's traffic. High CPA in May and June requires shifting to customer retention strategies while preparing for Q3 strategies. 
@@ -1437,7 +1444,7 @@ The dataset contains 5,400 campaign records spanning March 2023 to November 2024
                 <li>During September, concentrate on strategic analysis for Q3 preparation while also maintaining customer relationships at baseline investment level. On Saturday, launch campaigns encouraging user-generated content and community engagement on social media to retain engagement and gather customer preferences for the upcoming quarter. Deploy an Email expressing gratitude for August's engagement to existing users to maintain goodwill. On Sunday, publish engagement-driven content without sales pressure, such as questions, educational, and lifestyle articles, on social media. Analyze available data to create customer segment profiles and predict performance for developing Q3's operational strategies, campaigns, and messaging.
             <td style="vertical-align: top">
                 <li>Weekend: In October, start preparing for the upcoming holiday shopping season by analyzing the marketing landscape, customer shopping behavior, and competitors' strategies. Develop creative assets and design campaign architecture according to the analyzed data. Maintain customer engagement with an Email newsletter about styling and usage ideas of the new seasonal items. Deploy a survey and feedback collection Email with a genuine intent to improve and build recognition and acknowledgement. On Sunday, when CPA reaches its peak, focus on offering VIP-experienced holiday campaigns and exclusive holiday deal access programs to high-spending customers, while also launching content showing the benefit of premium users on social media and Email to encourage conversion.
-                <li>In November, prepare Cyber Monday campaigns and the December foundation while also retaining user anticipation for the Black Friday and Cyber Monday. Finalize campaigns and technical readiness for both days while starting to develop December's operational strategies, creative assets, and messaging. The weekend after Black Friday, express gratitude towards customers' receptivity and start counting down to Cyber Monday. On Saturday, when CPA is still low, promote conversion to premium users by delivering last-minute premium conversion campaigns through Email targeting existing users. Deploy early access to Cyber Monday deals to premium users while delivering personalized deals to existing users based on their purchasing histories. On Sunday, finalize Monday's campaigns and unveil special offers for trending items in the evening. Post hourly Cyber Monday promotional offers on social media until Midnight.
+                <li>In November, prepare Cyber Monday campaigns and the December foundation while also retaining user anticipation for Black Friday and Cyber Monday. Finalize campaigns and technical readiness for both days while starting to develop December's operational strategies, creative assets, and messaging. The weekend after Black Friday, express gratitude towards customers' receptivity and start counting down to Cyber Monday. On Saturday, when CPA is still low, promote conversion to premium users by delivering last-minute premium conversion campaigns through Email targeting existing users. Deploy early access to Cyber Monday deals to premium users while delivering personalized deals to existing users based on their purchasing histories. On Sunday, finalize Monday's campaigns and unveil special offers for trending items in the evening. Post hourly Cyber Monday promotional offers on social media until Midnight.
                 <li>During December, implement a balanced strategy between holiday conversion opportunities and relationship building for the upcoming Q4. Focus on festive shoppers on Saturday by launching additional shopping experience enhancement programs to the base "Express Shipping" campaigns to attract last-minute purchasers. Use Email newsletters delivered to existing users for the programs on the weekend. Leverage social media's broad reach for last-chance gift shopping advertisements and content to build community engagement. Sunday's peak CPA requires shifting focus to high-spending customer acquisition and user retention. Deploy premium-positioned gift collection Email recommendations targeting premium segment customers, while utilizing personalized gift recommendation SMS for the top 20% high-spenders. Analyze available data to prepare Q4's strategies, creative assets, and messaging patterns.
             </td>
         </tr>
